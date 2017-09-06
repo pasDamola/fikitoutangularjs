@@ -1,0 +1,34 @@
+<h1>Make a Call to the Server</h1>
+
+<p *ngIf="!auth.isAuthenticated()">
+  Log in to call a private (secured) server endpoint.
+</p>
+
+<button
+  class="btn btn-primary" 
+  ng-click="vm.ping()">
+    Get Public Gists
+</button>
+
+<button 
+  class="btn btn-primary"
+  ng-click="vm.securedPing()" 
+  ng-if="vm.auth.isAuthenticated()">
+    Create gist
+</button>
+ <div ng-repeat="item in vm.message">
+<h2>{{ item.url }}</h2>
+</div>
+
+
+
+ <!-- <div class="col-md-3" ng-repeat="item in data.product">
+          <div class="card">
+            
+        <h2>{{item.name}}</h2>
+        <h3>{{item.description}}</h3>
+        <span class="pull-right label label-primary">
+         {{item.price | currency}}
+        </span>
+       </div>
+      </div> -->
