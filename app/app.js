@@ -52,11 +52,11 @@
 
     // Initialization for the angular-auth0 library
     angularAuth0Provider.init({
-      clientID: AUTH0_CLIENT_ID,
-      domain: AUTH0_DOMAIN,
+      clientID: "DClk_XjPNuZAJqcJvEbrHukZ6BhvKu88",
+      domain: "oyincode.auth0.com",
       responseType: 'token id_token',
-      audience: AUTH0_AUDIENCE,
-      redirectUri: AUTH0_CALLBACK_URL,
+      audience: "https://api.github.com/gists",
+      redirectUri: 'http://localhost:3000/callback',
       scope: 'openid profile read:messages'
     });
 

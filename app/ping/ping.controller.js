@@ -53,7 +53,7 @@
       vm.message = '';
       $http.post("http://api.github.com/gists", JSON.stringify(data)).then(function(result) {
         vm.message = result.data;
-        console.log(result.data);
+        console.log(result);
       }, function(error) {
         vm.message = error;
       });
